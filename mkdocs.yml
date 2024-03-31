@@ -3,6 +3,7 @@ site_author: Blake
 
 theme:
   name: material
+  custom_dir: overrides
   features:
     - content.code.copy
     - navigation.sections

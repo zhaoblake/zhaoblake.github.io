@@ -7,18 +7,20 @@ comments: true
 authors: [Blake]
 ---
 
+
+#  我 Review 我自己
 以下内容源于我在公司的内部分享，已做脱敏处理。
 
-# 引入
+## 引入
 
 我们之前说过我们每个月都会有一个 code review 的环节，准确来说这不算是一个代码 review，我总结了一些我写代码踩过的一些坑，拎出来跟大家一起讨论一下。
 <!-- more -->
 
-# 内容介绍
+## 内容介绍
 
 今天讲四个小点的内容，魔法方法，异常处理，移除代码和反射。
 
-# 魔法方法
+## 魔法方法
 
 魔法方法，官方叫特殊方法（special methods），以双下划线开头双下线结尾的方法，常见的有 `__init__`、`__new__` 等。
 
@@ -125,7 +127,7 @@ __len__: 0.0023554999999999965
 
 可以看到直接调用魔法方法的确更快，但**性能优化第一部先是找到程序的性能瓶颈，再针对性能瓶颈进行优化**。所以，这里真的是你程序的性能瓶颈吗🤔？
 
-# 异常处理
+## 异常处理
 
 特别是对于我们 *** 程序，异常处理应该是我们在编码过程中高频遇到的一个场景。忽略异常，然后进行重试，我相信各位开发同学最熟悉不过了。
 
@@ -158,7 +160,7 @@ except Exception as e:  # at very least, log it
   logger.error(e)
 ```
 
-# 移除代码
+## 移除代码
 
 这段代码已经废弃了，是注释还是删除？提问环节🙋‍
 
@@ -174,7 +176,7 @@ except Exception as e:  # at very least, log it
 
 
 
-# 使用反射
+## 使用反射
 
 Python 中有很多方法利用了反射机制，例如：`type`，`isinstance`，`callable`，`gettarr` 等，本章节的观点只针对 `getattr`，今天先只欺负 `getattr` 它一个。
 
@@ -211,7 +213,7 @@ eating meat...
 
 我自己的业务代码也用到了 `getattr`，确实给我后面增加了一些阅读和调试上的成本，所以大家对与 `getattr` 还是要保持谨慎。
 
-# 参考资料
+## 参考资料
 
 - [Fluent Python: Clear, Concise, and Effective Programming](https://book.douban.com/subject/27028517/)
 

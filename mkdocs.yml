@@ -1,22 +1,26 @@
-site_name: Blake
+site_name: Blake's Corner
 site_author: Blake
 
 theme:
   name: material
   custom_dir: overrides
+  language: zh
   features:
     - content.code.copy
+#    - navigation.tabs
+#    - navigation.tabs.sticky
     - navigation.sections
     - navigation.instant
+    - navigation.tracking
   palette:
     - scheme: default
       toggle:
         icon: material/theme-light-dark
-        name: Switch to dark mode
+        name:
     - scheme: slate
       toggle:
         icon: material/theme-light-dark
-        name: Switch to light mode
+        name:
 
 plugins:
   - search
@@ -27,6 +31,8 @@ plugins:
       post_url_format: "{slug}"
 
 markdown_extensions:
+  - toc:
+      permalink: true
   - admonition
   - attr_list
   - footnotes
@@ -48,3 +54,4 @@ markdown_extensions:
 
 nav:
   - index.md
+  - 关于: about.md
